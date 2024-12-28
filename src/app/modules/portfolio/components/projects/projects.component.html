@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Projetos</h2>
+  <ul>
+    @for (project of projects(); track project) {
+    <li>
+      <button (click)="openDialog(project)">
+        <img
+          [src]="project.src"
+          [alt]="project.alt"
+          loading="lazy"
+          [attr.width]="project.width"
+          [attr.height]="project.height"
+        />
+      </button>
+    </li>
+    } @empty {
+      <h2>Não há nada por aqui, por enquanto...</h2>
+    }
+  </ul>
+</div>

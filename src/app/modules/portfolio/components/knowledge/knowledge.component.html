@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Conhecimentos</h2>
+  <ul>
+    @for (knowledge of knowledges(); track knowledge) {
+    <li>
+      <img
+        [src]="knowledge.src"
+        [alt]="knowledge.alt"
+        loading="lazy"
+        width="22px"
+        height="24px"
+      />
+    </li>
+    }
+  </ul>
+</div>
